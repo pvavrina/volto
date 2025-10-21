@@ -1,0 +1,16 @@
+# Fichier à créer : volto-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-plone-frontend # Nom CRUCIAL: doit être my-plone-frontend
+  namespace: plone
+  labels:
+    app: volto
+spec:
+  type: ClusterIP
+  ports:
+  - port: 3000
+    targetPort: 3000
+    protocol: TCP
+  selector:
+    app: volto # IMPORTANT : Doit correspondre au label dans volto-deployment.yaml
