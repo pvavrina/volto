@@ -3,3 +3,4 @@ nginx.ingress.kubernetes.io/configuration-snippet: |
   proxy_set_header Host $host;
   proxy_set_header X-Forwarded-Host $host;
 # ...
+# Forcer le refresh ArgoCD
